@@ -9,6 +9,23 @@ nav {
     background: transparent;
     position: fixed;
     padding: 18px;
+    animation: appear 2.5s forwards;
+    transition: 0.4s;
+
+    @keyframes appear {
+        0% {
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+
+    }
 
 
 

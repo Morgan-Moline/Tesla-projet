@@ -63,6 +63,32 @@ nav {
   background: transparent;
   position: fixed;
   padding: 18px;
+  -webkit-animation: appear 2.5s forwards;
+          animation: appear 2.5s forwards;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+@-webkit-keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 nav .nav-logo {
   font-family: Tesla, sans-serif;
@@ -123,6 +149,21 @@ header .Model-Y {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 50px;
+  -webkit-animation: appear 2.5s forwards;
+          animation: appear 2.5s forwards;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 header .Model-Y h1 {
   font-family: Gotham, cursive;
@@ -131,6 +172,28 @@ header .Model-Y h1 {
   font-weight: 700;
   margin-bottom: 10px;
   margin-top: 106px;
+  -webkit-animation: remonter 2s ease;
+          animation: remonter 2s ease;
+}
+@-webkit-keyframes remonter {
+  0% {
+    -webkit-transform: translateY(300%);
+            transform: translateY(300%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes remonter {
+  0% {
+    -webkit-transform: translateY(300%);
+            transform: translateY(300%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 header .Model-Y h4 {
   font-family: Gotham, cursive;
@@ -138,6 +201,21 @@ header .Model-Y h4 {
   font-size: 0.9em;
   border-bottom: 1px solid black;
   cursor: pointer;
+  -webkit-animation: appear 3.5s forwards;
+          animation: appear 3.5s forwards;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 header .Model-Y .button-config {
   margin-top: 450px;
@@ -151,10 +229,54 @@ header .Model-Y .button-config button {
   margin-left: 20px;
   color: black;
   cursor: pointer;
+  -webkit-animation: droite 2s ease;
+          animation: droite 2s ease;
+}
+@-webkit-keyframes droite {
+  0% {
+    -webkit-transform: translatex(300%);
+            transform: translatex(300%);
+  }
+  100% {
+    -webkit-transform: translatex(0);
+            transform: translatex(0);
+  }
+}
+@keyframes droite {
+  0% {
+    -webkit-transform: translatex(300%);
+            transform: translatex(300%);
+  }
+  100% {
+    -webkit-transform: translatex(0);
+            transform: translatex(0);
+  }
 }
 header .Model-Y .button-config .button-noir {
   color: white;
   padding: 10px 48px;
+  -webkit-animation: gauche 2s ease;
+          animation: gauche 2s ease;
+}
+@-webkit-keyframes gauche {
+  0% {
+    -webkit-transform: translatex(-300%);
+            transform: translatex(-300%);
+  }
+  100% {
+    -webkit-transform: translatex(0);
+            transform: translatex(0);
+  }
+}
+@keyframes gauche {
+  0% {
+    -webkit-transform: translatex(-300%);
+            transform: translatex(-300%);
+  }
+  100% {
+    -webkit-transform: translatex(0);
+            transform: translatex(0);
+  }
 }
 header p {
   margin-top: 40px;
@@ -162,6 +284,28 @@ header p {
   font-size: 0.8em;
   border-bottom: 1px solid black;
   cursor: pointer;
+  -webkit-animation: descendre 3.5s ease;
+          animation: descendre 3.5s ease;
+}
+@-webkit-keyframes descendre {
+  0% {
+    -webkit-transform: translateY(-500%);
+            transform: translateY(-500%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes descendre {
+  0% {
+    -webkit-transform: translateY(-500%);
+            transform: translateY(-500%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 
 .section1 {
