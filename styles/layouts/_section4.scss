@@ -1,0 +1,74 @@
+.section4 {
+    height: 100vh;
+    min-height: 100vh;
+    background: url(../img/bg-07.mp4) center/cover;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    scroll-snap-align: start;
+
+
+
+
+
+    video {
+        object-fit: cover;
+    }
+
+    .background-clip {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        height: 100vh;
+        width: 100%;
+        min-height: 100vh;
+        margin: 0 auto;
+    }
+
+    h2 {
+        font-family: $font1;
+        letter-spacing: 2px;
+        font-size: 2.5em;
+        font-weight: 700;
+        margin-bottom: 10px;
+        margin-top: 110px;
+        color: white;
+    }
+
+    h4 {
+
+        font-family: $font1;
+        font-weight: 100;
+        font-size: 0.9em;
+        color: white;
+
+        cursor: pointer;
+    }
+
+    .button-config {
+        margin-top: 450px;
+        cursor: pointer;
+
+        button {
+            padding: 10px 110px;
+            font-family: $font1;
+            font-size: 0.9em;
+            font-weight: 600;
+            margin-left: 20px;
+            color: white;
+            cursor: pointer;
+            background: none;
+            border: 2px solid white;
+            backdrop-filter: none;
+
+
+        }
+
+
+    }
+
+}

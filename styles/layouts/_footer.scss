@@ -1,0 +1,96 @@
+footer {
+    height: 100vh;
+    min-height: 100vh;
+    background: url(../img/bg-06.jpg) center/contain;
+    background-repeat: no-repeat;
+    background-size: 1800px 1000px;
+    scroll-snap-align: start;
+    margin: 0;
+
+    .section6 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h2 {
+            font-family: $font1;
+            letter-spacing: 2px;
+            font-size: 2.5em;
+            font-weight: 700;
+            text-align: center;
+
+            margin: 108px auto 10px;
+        }
+
+        h4 {
+
+            font-family: $font1;
+            font-weight: 100;
+            font-size: 0.9em;
+            border-bottom: 1px solid black;
+            cursor: pointer;
+        }
+
+        .button-config {
+            margin-top: 450px;
+            cursor: pointer;
+
+            button {
+                padding: 10px 60px;
+                font-family: $font1;
+                font-size: 0.9em;
+                font-weight: 600;
+                margin-left: 20px;
+                color: black;
+                cursor: pointer;
+                backdrop-filter: none;
+                background: white;
+
+
+            }
+
+
+        }
+    }
+
+    .info-legal {
+        color: rgba(255, 255, 255, 0.796);
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        font-size: 0.8em;
+        margin-top: 60px;
+        font-family: $font1;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: "Pensez à covoiturer #SeDéplacerMoinsPolluer";
+            color: rgba(255, 255, 255, 0.974);
+            top: 0;
+            left: 30px;
+            font-size: 1em;
+            font-family: $font1;
+        }
+
+        h4 {
+            text-decoration: none;
+            font-family: $font1;
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            li {
+                margin-left: 15px;
+            }
+        }
+
+
+    }
+
+
+
+}
