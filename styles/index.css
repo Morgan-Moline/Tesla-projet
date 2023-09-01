@@ -59,10 +59,10 @@ nav {
           align-items: center;
   width: 100%;
   overflow: hidden;
-  top: 0;
+  top: -7px;
   background: transparent;
   position: fixed;
-  padding: 18px;
+  margin: 18px;
   -webkit-animation: appear 2.5s forwards;
           animation: appear 2.5s forwards;
   -webkit-transition: 0.4s;
@@ -94,10 +94,10 @@ nav .nav-logo {
   font-family: Tesla, sans-serif;
   letter-spacing: 10px;
   font-size: 1em;
-  font-weight: 300;
+  font-weight: 100;
   text-align: left;
   width: 10%;
-  margin-left: 30px;
+  margin-left: 10px;
 }
 nav .nav-elements {
   display: -webkit-box;
@@ -110,6 +110,11 @@ nav .nav-elements {
       -ms-flex-align: center;
           align-items: center;
   width: 33%;
+}
+@media screen and (max-width: 870px) {
+  nav .nav-elements {
+    display: none;
+  }
 }
 nav .nav-elements li {
   margin-left: 20px;
@@ -124,18 +129,45 @@ nav .nav-icons {
   font-weight: 100;
   margin-right: 20px;
 }
+@media screen and (max-width: 870px) {
+  nav .nav-icons {
+    margin-right: 18px;
+  }
+}
 nav .nav-icons svg {
   margin-left: 10px;
   cursor: pointer;
+}
+@media screen and (max-width: 870px) {
+  nav .nav-icons svg {
+    display: none;
+  }
+}
+nav .nav-icons button {
+  padding: 8px 15px;
+  font-family: Gotham, cursive;
+  font-weight: 600;
+  font-size: 0.7em;
+  -webkit-box-align: right;
+      -ms-flex-align: right;
+          align-items: right;
+  background: #D7E4ED;
+}
+@media screen and (min-width: 870px) {
+  nav .nav-icons button {
+    display: none;
+  }
 }
 
 header {
   height: 100vh;
   min-height: 100vh;
   width: 100%;
-  background: url(../img/bg-01.jpg) center/cover;
-  scroll-snap-align: start;
+  background: url(../img/bg-01.jpg);
   margin-top: -50px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 header .Model-Y {
   display: -webkit-box;
@@ -175,6 +207,13 @@ header .Model-Y h1 {
   -webkit-animation: remonter 2s ease;
           animation: remonter 2s ease;
 }
+@media screen and (max-width: 570px) {
+  header .Model-Y h1 {
+    font-size: 2.3em;
+    font-weight: 900;
+    letter-spacing: 1px;
+  }
+}
 @-webkit-keyframes remonter {
   0% {
     -webkit-transform: translateY(300%);
@@ -206,6 +245,11 @@ header .Model-Y h4 {
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
+@media screen and (max-width: 560px) {
+  header .Model-Y h4 {
+    letter-spacing: 1px;
+  }
+}
 @keyframes appear {
   0% {
     opacity: 0;
@@ -221,6 +265,20 @@ header .Model-Y .button-config {
   margin-top: 450px;
   cursor: pointer;
 }
+@media screen and (max-width: 560px) {
+  header .Model-Y .button-config {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 header .Model-Y .button-config button {
   padding: 10px 102px;
   font-family: Gotham, cursive;
@@ -231,6 +289,34 @@ header .Model-Y .button-config button {
   cursor: pointer;
   -webkit-animation: droite 2s ease;
           animation: droite 2s ease;
+}
+@media screen and (max-width: 560px) {
+  header .Model-Y .button-config button {
+    padding: 10px 220px;
+    -webkit-animation: descendre 3.5s ease;
+            animation: descendre 3.5s ease;
+    margin: 0 auto;
+  }
+  @-webkit-keyframes descendre {
+    0% {
+      -webkit-transform: translateY(-500%);
+              transform: translateY(-500%);
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+  }
+  @keyframes descendre {
+    0% {
+      -webkit-transform: translateY(-500%);
+              transform: translateY(-500%);
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+  }
 }
 @-webkit-keyframes droite {
   0% {
@@ -258,6 +344,13 @@ header .Model-Y .button-config .button-noir {
   -webkit-animation: gauche 2s ease;
           animation: gauche 2s ease;
 }
+@media screen and (max-width: 560px) {
+  header .Model-Y .button-config .button-noir {
+    margin-bottom: 15px;
+    padding: 10px 140px;
+    text-align: center;
+  }
+}
 @-webkit-keyframes gauche {
   0% {
     -webkit-transform: translatex(-300%);
@@ -266,6 +359,14 @@ header .Model-Y .button-config .button-noir {
   100% {
     -webkit-transform: translatex(0);
             transform: translatex(0);
+  }
+  0% {
+    -webkit-transform: translateY(-500%);
+            transform: translateY(-500%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 @keyframes gauche {
@@ -277,6 +378,14 @@ header .Model-Y .button-config .button-noir {
     -webkit-transform: translatex(0);
             transform: translatex(0);
   }
+  0% {
+    -webkit-transform: translateY(-500%);
+            transform: translateY(-500%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 header p {
   margin-top: 40px;
@@ -286,6 +395,15 @@ header p {
   cursor: pointer;
   -webkit-animation: descendre 3.5s ease;
           animation: descendre 3.5s ease;
+}
+@media screen and (max-width: 560px) {
+  header p {
+    margin-top: 14px;
+    font-weight: 100;
+    border: none;
+    font-size: 0.7em;
+    letter-spacing: 1px;
+  }
 }
 @-webkit-keyframes descendre {
   0% {
@@ -332,6 +450,13 @@ header p {
   margin-bottom: 10px;
   margin-top: 108px;
 }
+@media screen and (max-width: 570px) {
+  .section1 h2 {
+    font-size: 2.3em;
+    font-weight: 900;
+    letter-spacing: 1px;
+  }
+}
 .section1 h4 {
   font-family: Gotham, cursive;
   font-weight: 100;
@@ -339,9 +464,29 @@ header p {
   border-bottom: 1px solid black;
   cursor: pointer;
 }
+@media screen and (max-width: 560px) {
+  .section1 h4 {
+    font-weight: 100;
+    font-size: 0.95em;
+  }
+}
 .section1 .button-config {
   margin-top: 450px;
   cursor: pointer;
+}
+@media screen and (max-width: 560px) {
+  .section1 .button-config {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 .section1 .button-config button {
   padding: 10px 25px;
@@ -352,9 +497,21 @@ header p {
   color: black;
   cursor: pointer;
 }
+@media screen and (max-width: 560px) {
+  .section1 .button-config button {
+    padding: 10px 140px;
+    margin: 0 auto;
+  }
+}
 .section1 .button-config .button-noir {
   color: white;
   padding: 10px 48px;
+}
+@media screen and (max-width: 560px) {
+  .section1 .button-config .button-noir {
+    margin-bottom: 15px;
+    padding: 10px 165px;
+  }
 }
 
 p {
@@ -363,6 +520,15 @@ p {
   font-size: 0.8em;
   border-bottom: 1px solid black;
   cursor: pointer;
+}
+@media screen and (max-width: 560px) {
+  p {
+    margin-top: 14px;
+    font-weight: 100;
+    border: none;
+    font-size: 0.7em;
+    letter-spacing: 1px;
+  }
 }
 
 .section2 {
@@ -389,6 +555,13 @@ p {
   margin-bottom: 10px;
   margin-top: 108px;
 }
+@media screen and (max-width: 570px) {
+  .section2 h2 {
+    font-size: 2.3em;
+    font-weight: 900;
+    letter-spacing: 1px;
+  }
+}
 .section2 h4 {
   font-family: Gotham, cursive;
   font-weight: 100;
@@ -396,9 +569,29 @@ p {
   border-bottom: 1px solid black;
   cursor: pointer;
 }
+@media screen and (max-width: 560px) {
+  .section2 h4 {
+    font-weight: 100;
+    font-size: 0.95em;
+  }
+}
 .section2 .button-config {
   margin-top: 450px;
   cursor: pointer;
+}
+@media screen and (max-width: 560px) {
+  .section2 .button-config {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 .section2 .button-config button {
   padding: 10px 80px;
@@ -409,9 +602,21 @@ p {
   color: black;
   cursor: pointer;
 }
+@media screen and (max-width: 560px) {
+  .section2 .button-config button {
+    padding: 10px 195px;
+    margin: 0 auto;
+  }
+}
 .section2 .button-config .button-noir {
   color: white;
   padding: 10px 25px;
+}
+@media screen and (max-width: 560px) {
+  .section2 .button-config .button-noir {
+    margin-bottom: 15px;
+    padding: 10px 145px;
+  }
 }
 
 .section3 {
@@ -438,16 +643,30 @@ p {
   margin-bottom: 10px;
   margin-top: 108px;
 }
-.section3 h4 {
-  font-family: Gotham, cursive;
-  font-weight: 100;
-  font-size: 0.9em;
-  border-bottom: 1px solid black;
-  cursor: pointer;
+@media screen and (max-width: 570px) {
+  .section3 h2 {
+    font-size: 2.3em;
+    font-weight: 900;
+    letter-spacing: 1px;
+  }
 }
 .section3 .button-config {
   margin-top: 450px;
   cursor: pointer;
+}
+@media screen and (max-width: 560px) {
+  .section3 .button-config {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 .section3 .button-config button {
   padding: 10px 70px;
@@ -458,9 +677,21 @@ p {
   color: black;
   cursor: pointer;
 }
+@media screen and (max-width: 560px) {
+  .section3 .button-config button {
+    padding: 10px 195px;
+    margin: 0 auto;
+  }
+}
 .section3 .button-config .button-noir {
   color: white;
   padding: 10px 25px;
+}
+@media screen and (max-width: 560px) {
+  .section3 .button-config .button-noir {
+    margin-bottom: 15px;
+    padding: 10px 145px;
+  }
 }
 
 .section4 {
@@ -505,6 +736,13 @@ p {
   margin-top: 110px;
   color: white;
 }
+@media screen and (max-width: 570px) {
+  .section4 h2 {
+    font-size: 2.2em;
+    font-weight: 900;
+    letter-spacing: 1px;
+  }
+}
 .section4 h4 {
   font-family: Gotham, cursive;
   font-weight: 100;
@@ -512,9 +750,29 @@ p {
   color: white;
   cursor: pointer;
 }
+@media screen and (max-width: 560px) {
+  .section4 h4 {
+    font-weight: 100;
+    font-size: 0.95em;
+  }
+}
 .section4 .button-config {
   margin-top: 450px;
   cursor: pointer;
+}
+@media screen and (max-width: 560px) {
+  .section4 .button-config {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 .section4 .button-config button {
   padding: 10px 110px;
@@ -525,9 +783,15 @@ p {
   color: white;
   cursor: pointer;
   background: none;
-  border: 2px solid white;
+  border: 3px solid white;
   -webkit-backdrop-filter: none;
           backdrop-filter: none;
+}
+@media screen and (max-width: 560px) {
+  .section4 .button-config button {
+    padding: 10px 210px;
+    margin: 0 auto;
+  }
 }
 
 .section5 {
@@ -554,21 +818,54 @@ p {
   margin-bottom: 10px;
   margin-top: 108px;
 }
-.section5 h4 {
+@media screen and (max-width: 570px) {
+  .section5 h2 {
+    font-size: 1.7em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+}
+.section5 h3 {
   font-family: Gotham, cursive;
   font-weight: 100;
   font-size: 0.9em;
-  border-bottom: 1px solid black;
   cursor: pointer;
+}
+@media screen and (max-width: 560px) {
+  .section5 h3 {
+    font-weight: 100;
+    font-size: 0.95em;
+  }
 }
 .section5 .button-config {
   margin-top: 450px;
   cursor: pointer;
 }
+@media screen and (max-width: 560px) {
+  .section5 .button-config {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 .section5 .button-config .button-noir {
   color: white;
   padding: 10px 80px;
   font-size: 1em;
+}
+@media screen and (max-width: 560px) {
+  .section5 .button-config .button-noir {
+    padding: 10px 185px;
+    margin: 0 auto;
+  }
 }
 
 footer {
@@ -600,16 +897,31 @@ footer .section6 h2 {
   text-align: center;
   margin: 108px auto 10px;
 }
-footer .section6 h4 {
-  font-family: Gotham, cursive;
-  font-weight: 100;
-  font-size: 0.9em;
-  border-bottom: 1px solid black;
-  cursor: pointer;
+@media screen and (max-width: 570px) {
+  footer .section6 h2 {
+    font-size: 1.7em;
+    font-weight: 600;
+    text-align: center;
+  }
 }
 footer .section6 .button-config {
   margin-top: 450px;
   cursor: pointer;
+}
+@media screen and (max-width: 560px) {
+  footer .section6 .button-config {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 420px;
+  }
 }
 footer .section6 .button-config button {
   padding: 10px 60px;
@@ -622,6 +934,12 @@ footer .section6 .button-config button {
   -webkit-backdrop-filter: none;
           backdrop-filter: none;
   background: white;
+}
+@media screen and (max-width: 560px) {
+  footer .section6 .button-config button {
+    padding: 12px 80px;
+    margin: 0 auto;
+  }
 }
 footer .info-legal {
   color: rgba(255, 255, 255, 0.796);
@@ -639,6 +957,12 @@ footer .info-legal {
   font-family: Gotham, cursive;
   position: relative;
 }
+@media screen and (max-width: 560px) {
+  footer .info-legal {
+    font-size: 0.7em;
+    margin-top: 80px;
+  }
+}
 footer .info-legal::before {
   position: absolute;
   content: "Pensez à covoiturer #SeDéplacerMoinsPolluer";
@@ -647,6 +971,12 @@ footer .info-legal::before {
   left: 30px;
   font-size: 1em;
   font-family: Gotham, cursive;
+}
+@media screen and (max-width: 560px) {
+  footer .info-legal::before {
+    top: -190%;
+    left: 25%;
+  }
 }
 footer .info-legal h4 {
   text-decoration: none;
@@ -664,4 +994,9 @@ footer .info-legal ul {
 }
 footer .info-legal ul li {
   margin-left: 15px;
+}
+@media screen and (max-width: 560px) {
+  footer .info-legal ul li {
+    margin-left: 5px;
+  }
 }/*# sourceMappingURL=index.css.map */

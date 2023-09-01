@@ -2,9 +2,14 @@ header {
     height: 100vh;
     min-height: 100vh;
     width: 100%;
-    background: url(../img/bg-01.jpg) center/cover;
-    scroll-snap-align: start;
+    background: url(../img/bg-01.jpg);
     margin-top: -50px;
+    background-position: center;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
 
 
 
@@ -43,6 +48,13 @@ header {
             margin-top: 106px;
             animation: remonter 2s ease;
 
+            @media screen and (max-width:570px) {
+                font-size: 2.3em;
+                font-weight: 900;
+                letter-spacing: 1px;
+
+            }
+
             @keyframes remonter {
                 0% {
                     transform: translateY(300%);
@@ -66,6 +78,10 @@ header {
             animation: appear 3.5s forwards;
             transition: 0.4s;
 
+            @media screen and (max-width:560px) {
+                letter-spacing: 1px;
+            }
+
             @keyframes appear {
                 0% {
                     opacity: 0;
@@ -87,6 +103,15 @@ header {
             margin-top: 450px;
             cursor: pointer;
 
+            @media screen and (max-width:560px) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+
+
+            }
+
             button {
                 padding: 10px 102px;
                 font-family: $font1;
@@ -96,6 +121,23 @@ header {
                 color: black;
                 cursor: pointer;
                 animation: droite 2s ease;
+
+                @media screen and (max-width:560px) {
+                    padding: 10px 220px;
+                    animation: descendre 3.5s ease;
+                    margin: 0 auto;
+
+                    @keyframes descendre {
+
+                        0% {
+                            transform: translateY(-500%);
+                        }
+
+                        100% {
+                            transform: translateY(0);
+                        }
+                    }
+                }
 
                 @keyframes droite {
                     0% {
@@ -117,6 +159,16 @@ header {
                 padding: 10px 48px;
                 animation: gauche 2s ease;
 
+                @media screen and (max-width:560px) {
+                    margin-bottom: 15px;
+                    padding: 10px 140px;
+                    text-align: center;
+
+
+
+
+                }
+
                 @keyframes gauche {
                     0% {
                         transform: translatex(-300%);
@@ -126,6 +178,13 @@ header {
                         transform: translatex(0);
                     }
 
+                    0% {
+                        transform: translateY(-500%);
+                    }
+
+                    100% {
+                        transform: translateY(0);
+                    }
                 }
 
             }
@@ -139,6 +198,15 @@ header {
         border-bottom: 1px solid black;
         cursor: pointer;
         animation: descendre 3.5s ease;
+
+        @media screen and (max-width:560px) {
+            margin-top: 14px;
+            font-weight: 100;
+            border: none;
+            font-size: 0.7em;
+            letter-spacing: 1px;
+
+        }
 
         @keyframes descendre {
             0% {

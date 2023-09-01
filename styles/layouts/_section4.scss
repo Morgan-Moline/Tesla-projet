@@ -37,6 +37,13 @@
         margin-bottom: 10px;
         margin-top: 110px;
         color: white;
+
+        @media screen and (max-width:570px) {
+            font-size: 2.2em;
+            font-weight: 900;
+            letter-spacing: 1px;
+
+        }
     }
 
     h4 {
@@ -47,11 +54,23 @@
         color: white;
 
         cursor: pointer;
+
+        @media screen and (max-width:560px) {
+            font-weight: 100;
+            font-size: 0.95em;
+        }
     }
 
     .button-config {
         margin-top: 450px;
         cursor: pointer;
+
+        @media screen and (max-width:560px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
 
         button {
             padding: 10px 110px;
@@ -62,8 +81,13 @@
             color: white;
             cursor: pointer;
             background: none;
-            border: 2px solid white;
+            border: 3px solid white;
             backdrop-filter: none;
+
+            @media screen and (max-width:560px) {
+                padding: 10px 210px;
+                margin: 0 auto;
+            }
 
 
         }
