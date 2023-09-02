@@ -47,6 +47,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin-top: 590px;
 
         }
 
@@ -60,7 +61,7 @@
             cursor: pointer;
 
             @media screen and (max-width:560px) {
-                padding: 10px 140px;
+                padding: 10px 80px;
                 margin: 0 auto;
             }
 
@@ -73,7 +74,7 @@
 
             @media screen and (max-width:560px) {
                 margin-bottom: 15px;
-                padding: 10px 165px;
+                padding: 10px 105px;
 
 
             }
